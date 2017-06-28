@@ -30,7 +30,7 @@ print("%%%%%")
   Test_ALL <- Test_ALL[ , !grepl(( "Freq()"  ) , names( Test_ALL ) ) ]
   ind <- apply( Test_ALL , 1 , function(x) any( x > 0 ) )
   Test_ALL[ ind , ]
-print(".....")
+print(".....")  
   Test_ALL$activity<-replace(Test_ALL$activity, Test_ALL$activity==1, "WALKING" )
   Test_ALL$activity<-replace(Test_ALL$activity, Test_ALL$activity==2, "WALKING_UPSTAIRS" )
   Test_ALL$activity<-replace(Test_ALL$activity, Test_ALL$activity==3, "WALKING_DOWNSTAIRS" )
